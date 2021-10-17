@@ -12,7 +12,7 @@ module.exports = app => {
   router.post('/admin/checkLogin', controller.admin.main.checkLogin); // 登录
   router.get(
     '/admin/getTypeInfo',
-    adminauth,
+    // adminauth,
     controller.admin.main.getTypeInfo
   ); // 获取 文章类型
   router.post('/admin/addArticle', adminauth, controller.admin.main.addArticle);

@@ -47,13 +47,17 @@ module.exports = appInfo => {
     csrf: {
       enable: false,
     },
-    domainWhiteList:['http://127.0.0.1:3001', 'http://127.0.0.1:3000', 'http://127.0.0.1:7001']
+    domainWhiteList: [
+      "http://localhost:3001",
+      "http://localhost:3000",
+      "http://127.0.0.1:7001",
+    ],
   };
   config.cors = {
     // 如果你只想让http://localhost:3000来进行接口方案，就可以设置成下面的代码。
     // origin: "http://localhost:3000", //只允许这个域进行访问接口
     // credentials: true, // 开启认证
-    origin: 'http://localhost:3000',
+    // origin: '*',
     // origin: 'http://localhost:3000',
     credentials: true, // 允许cookie 跨域 
     allowMethods: 'GET,HEAD,PUT,POST,DELETE,PATCH,OPTIONS', // 可以跨域访问的请求

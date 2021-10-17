@@ -50,7 +50,8 @@ class HomeController extends Controller {
 
   // 得到类别名称和编号
   async getTypeInfo() {
-    const result = await this.app.mysql.select("type");
+    const sql = "SELECT * from type ORDER BY orderNum asc";
+    const result = await this.app.mysql.query(sql);
     this.ctx.body = { data: result };
   }
 
