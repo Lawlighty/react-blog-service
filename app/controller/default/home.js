@@ -16,8 +16,11 @@ class HomeController extends Controller {
       "article.introduce as introduce," +
       "article.add_time as add_time," +
       "article.view_count as view_count ," +
+      "article.stick as stick ," +
+      "article.tags as tags ," +
       ".type.typeName as typeName " +
-      "FROM article LEFT JOIN type ON article.type_id = type.Id";
+      "FROM article LEFT JOIN type ON article.type_id = type.Id" +
+      " ORDER BY stick DESC, article.id DESC";
 
     const results = await this.app.mysql.query(sql);
 
@@ -36,6 +39,8 @@ class HomeController extends Controller {
       "article.introduce as introduce," +
       "article.article_content as article_content," +
       "article.add_time as add_time," +
+      "article.stick as stick ," +
+      "article.tags as tags ," +
       "article.view_count as view_count ," +
       "type.typeName as typeName ," +
       "type.id as typeId " +
@@ -64,10 +69,13 @@ class HomeController extends Controller {
       "article.introduce as introduce," +
       "article.add_time as add_time," +
       "article.view_count as view_count ," +
+      "article.stick as stick ," +
+      "article.tags as tags ," +
       "type.typeName as typeName " +
       "FROM article LEFT JOIN type ON article.type_id = type.Id " +
       "WHERE type_id=" +
-      id;
+      id +
+      " ORDER BY stick DESC, article.id DESC";
     const result = await this.app.mysql.query(sql);
     this.ctx.body = { data: result };
   }

@@ -94,6 +94,8 @@ class MainController extends Controller {
       "article.introduce as introduce," +
       "article.article_content as article_content," +
       "article.add_time as add_time," +
+      "article.stick as stick ," +
+      "article.tags as tags ," +
       "article.view_count as view_count ," +
       "type.typeName as typeName ," +
       "type.id as typeId " +
