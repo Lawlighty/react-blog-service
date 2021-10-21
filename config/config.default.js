@@ -48,9 +48,14 @@ module.exports = appInfo => {
       enable: false,
     },
     domainWhiteList: [
-      "http://localhost:3001",
-      "http://localhost:3000",
-      "http://127.0.0.1:7001",
+      // "http://localhost:3001",
+      // "http://localhost:3000",
+      // "http://127.0.0.1:7001",
+      "http://47.96.105.70:8889",
+      "http://47.96.105.70:8890",
+      "http://47.96.105.70:8891",
+      "http://47.96.105.70:7001",
+      "http://47.96.105.70:3000",
     ],
   };
   config.cors = {
