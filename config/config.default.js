@@ -53,6 +53,7 @@ module.exports = appInfo => {
       "http://127.0.0.1:7001",
       "https://cn.bing.com",
       "http://blog.lawlighty.top",
+      "http://blog.lawlighty.top:8889",
       // "http://47.96.105.70:8889",
       // "http://47.96.105.70:8890",
       // "http://47.96.105.70:8891",
